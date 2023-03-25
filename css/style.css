@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    
+
+    /* ff 3.6+ */
+    background:-moz-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 99%);
+
+    /* safari 5.1+,chrome 10+ */
+    background:-webkit-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 99%);
+
+    /* opera 11.10+ */
+    background:-o-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 99%);
+
+    /* ie 10+ */
+    background:-ms-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 99%);
+
+    /* global 92%+ browsers support */
+    background:radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 99%);
+
+
+}
+
+.container{
+    position: relative;
+    max-width: 320px;
+    width: 100%;
+    border-radius: 8px;
+    margin: 80px auto 30px;
+    
+
+}
+
+.select_btn{
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(132, 129, 129, 0.4);
+}
+
+.select_btn .text_btn{
+    font-size: 18px;
+    font-weight: 400;
+    color: #333;
+}
+
+.select_btn .down_arrow{
+    display: flex;
+    height: 21px;
+    height: 21px;
+    width: 21px;
+    border-radius: 50%;
+    background: #6e93f7;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 14px;
+    transition: .4s;
+    
+}
+
+.select_btn.open .down_arrow{
+    transform: rotate(-180deg);
+}
+
+.country_list{
+    position: relative;
+    margin-top: 15px;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(132, 129, 129, 0.4);
+    display: none;
+}
+
+.select_btn.open ~ .country_list{
+    display: block ;
+}
+
+.country_list .country{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    list-style: none;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0 15px;
+    border-radius: 8px;
+}
+
+.country_list .country:hover{
+    background-color:  rgb(53, 122, 196);
+    color: #fff;
+}
+
+.country .list{
+    font-size: 16px;
+    font-weight: 400;
+    color: #3f3e3e;
+}
+
+.country .checkbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 16px;
+    width: 16px;
+    border-radius: 4px ;
+    margin-right: 12px;
+    border: 1.5px solid #c0c0c0;
+    transition: all 0.3s ease-in-out;
+}
+
+.checkbox .fa-check{
+    font-size: 11px;
+    transform: scale(0);
+    transition: all 0.3 ease-in-out;
+}
+
+.country.checked .fa-check{
+    transform: scale(1);
+}
